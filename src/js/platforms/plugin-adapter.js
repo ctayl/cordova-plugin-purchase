@@ -47,7 +47,7 @@ function init() {
 
     for (var i = 0; i < store.products.length; ++i) {
       skus.push(store.products[i].id);
-      if (store.products[i].type === store.PAID_SUBSCRIPTION)
+      if (store.products[i].type === store.PAID_SUBSCRIPTION || store.products[i].type === store.NON_RENEWING_SUBSCRIPTION)
         subsSkus.push(store.products[i].id);
       else
         inAppSkus.push(store.products[i].id);
